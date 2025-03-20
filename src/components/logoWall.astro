@@ -1,20 +1,55 @@
 ---
+
 const technologies = [
-  "astro",
-  "vue",
-  "react",
-  "typeScript",
-  "tailwindcss",
-  "next",
-  "nodejs",
-  "HTML5",
-  "CSS3",
-  "javaScript",
-  "git",
-  "supabase",
-  "mysql",
-  "bash",
+  // Cloud & Infrastructure
+  'Azure',
+  'Docker',
+  'Linux',
+  'Raspberry Pi',
+  
+  // Languages
+  'Python',
+  'JavaScript',
+  'PHP',
+  'Java',
+  'C++',
+  
+  // Web Technologies
+  'HTML5',
+  'CSS3',
+  'nodejs',
+  
+  // Frameworks & Libraries
+  'Django',
+  'Flask',
+  'FastAPI',
+  'Laravel',
+  
+  // AI & ML
+  'TensorFlow',
+  'PyTorch',
+  'Keras',
+  'scikit-learn',
+  'OpenCV',
+  
+  // Data & Visualization
+  'Matplotlib',
+  'Ploty',
+  'NumPy',
+  'Pandas',
+
+  // Databases
+  'MongoDB',
+  'MySQL',
+  'PostgresSQL',
+  
+  // Development Tools
+  'git',
+  'bash',
+  'Sequelize'
 ];
+
+
 ---
 
 <div class="relative overflow-x-hidden py-8">
@@ -37,7 +72,7 @@ const technologies = [
             class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
             width="30"
             height="30"
-            loading="lazy"
+            loading="eager"
           />
           <span class="text-lg font-medium text-[var(--white-icon)]">
             {tech.charAt(0).toUpperCase() + tech.slice(1)}
