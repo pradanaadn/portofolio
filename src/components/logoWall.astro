@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import {getPath} from "../utils.tsx";
 
 const technologies = [
   // Cloud & Infrastructure
@@ -47,7 +48,6 @@ const technologies = [
   // Development Tools
   'git',
   'bash',
-  'Sequelize'
 ];
 
 
@@ -68,7 +68,7 @@ const technologies = [
       [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="flex items-center gap-2 group transition-all duration-300">
           <Image
-            src={`/svg/${tech}.svg`}
+            src={getPath(`/svg/${tech}.svg`)}
             alt={tech}
             class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
             width="30"
