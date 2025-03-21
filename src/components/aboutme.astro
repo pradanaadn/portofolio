@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import me from "../../public/me.png";
+import {getPath} from  "../utils.tsx";
 
 const summary = `Results-driven Machine Learning Engineer with 1 year of hands-on experience in developing 
 scalable AI solutions. Proficient in Python, TensorFlow, PyTorch, and system architecture. 
@@ -34,7 +35,7 @@ const education = [
         <div class="flex flex-col sm:flex-row gap-4">
           <a
             type="button"
-            href="../../public/pdf/latest_resume.pdf"
+            href={getPath("/pdf/latest_resume.pdf")}
             target="_blank"
             class="text-yellow-950 bg-yellow-500 hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-extrabold rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2"
           >
