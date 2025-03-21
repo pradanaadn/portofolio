@@ -1,4 +1,3 @@
-
 const CalendarIcon = () => (
     <svg
         className="w-2.5 h-2.5 text-white dark:text-white"
@@ -31,7 +30,7 @@ const TimelineItem = ({
         <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
             {position}
             {isCurrent && (
-                <span className="bg-blue-100 text-yellow-50 text-sm font-medium me-2 px-2.5 py-0.5 rounded-xl dark:bg-yellow-600 dark:text-blue-50 ms-3">
+                <span className="bg-blue-100 text-yellow-950 text-sm font-medium me-2 px-2.5 py-0.5 rounded-xl dark:bg-yellow-500 dark:text-yellow-950 ms-3">
                     Current
                 </span>
             )}
@@ -39,9 +38,7 @@ const TimelineItem = ({
         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
             {date}
         </time>
-        <h4 className=" font-bold text-gray-500 dark:text-gray-400">
-            {company}
-        </h4>
+        <h4 className=" font-bold text-gray-500 dark:text-gray-400">{company}</h4>
         <ul className="space-y-2">
             {task.map((task, index) => (
                 <li
@@ -65,13 +62,14 @@ const TimelineItem = ({
 const WorkTimeline = () => {
     const experiences = [
         {
-            company: "Adamata Indonesia",
+            company: "PT.Adamata Indonesia",
             date: "Jan 2025 - Present",
             position: "Machine Learning Engineer Intern",
             task: [
-                "Developing and deploying machine learning models for recommendation system",
-                "Optimizing and improving existing machine learning models",
-                "Collaborating with data engineers to improve data pipeline",
+                "Contributing to data and CI/CD pipelines setup for machine learning model development",
+                "Optimizing object detection model on edge device",
+                "Explore cutting-edge computer vision technology and algorithms for waste management ",
+                "Lead the software system design and refactor of bottle cap sorting. Increase 40% sorting performence ",
             ],
             isCurrent: true,
         },
@@ -80,9 +78,9 @@ const WorkTimeline = () => {
             date: "Sept 2024 - Dec 2024",
             position: "Artificial Intelligence Engineer Intern",
             task: [
-                "Developing and deploying machine learning models for recommendation system",
-                "Optimizing and improving existing machine learning models",
-                "Collaborating with data engineers to improve data pipeline",
+                "Led the development of a centralized system integrating AI models such as OpenAI, Gemini, and Anthropic, streamlining access for both product and development teams.",
+                "Developed REST API endpoints for a Coding Assistant, improving engineering team access.",
+                " Implemented CI/CD pipelines to automate the deployment process, reducing deployment errors by 25% and enhancing system reliability.",
             ],
         },
         {
@@ -90,9 +88,10 @@ const WorkTimeline = () => {
             date: "Aug 2024",
             position: "Product Development Intern",
             task: [
-                "Developing and deploying machine learning models for recommendation system",
-                "Optimizing and improving existing machine learning models",
-                "Collaborating with data engineers to improve data pipeline",
+                "Contributed to the integration of RTSP cameras for object detection and optimized multithreaded data processing using CUDA, improving system performance by 40% and enabling real-time analytics.",
+                "Led data collection and labeling for training datasets for object detection",
+                "Led research on deploying YOLO models on Jetson Nano for object detection, enhancing speed and accuracy in AI-driven solutions.",
+                "Configured MQTT protocols and integrated them with ThingsBoard, ensuring seamless data communication and system reliability."
             ],
         },
     ];

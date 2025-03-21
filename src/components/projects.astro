@@ -1,60 +1,80 @@
 ---
-import { Image } from "astro:assets";
-import ProjectList, {Project} from "../React/ProjectList.tsx";
-import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
-import moviesfordevs from "../../public/moviesfordevs.png";
-
-
-
-
-
-
+import ProjectList, { Project } from "../React/ProjectList.tsx";
+import Waste from "../../public/projects/Waste.png";
+import Trash from "../../public/projects/Trash.png";
+import umeals from "../../public/projects/NutriMom.png";
 
 const projects: Project[] = [
   {
     title: "Trash Object Detection",
-    image: svgl as ImageMetadata,
-    preview: "https://pitch.com/v/mangorenai-x6n96f",
+    year: "2024",
+    image: Trash as ImageMetadata,
+    preview:
+      "https://pitch.com/v/mangorenai-x6n96f/8d37c2f6-d584-4403-8c63-3ce5c4325ef7",
+    link: "https://github.com/Magang-X-Cloud",
     status: "Completed",
-    description: "AI-powered waste detection and monitoring solution for waste management in Bandung",
+    description:
+      "AI-powered waste detection and monitoring solution for waste management. A hackathon project",
     stack: ["Python", "Streamlit", "YOLOv8", "Alibaba Cloud", "OpenCV"],
     achievements: [
-      "92% precision in waste classification",
-      "Real-time monitoring dashboard",
-      "Chatbot powered by Qwen-MAX"
-    ]
+      "Achieve 92% precision in waste objec detection",
+      "Chatbot powered by Qwen-MAX",
+      
+    ],
+  },
+  {
+    title: "Waste Classification",
+    year: "2024",
+    image: Waste as ImageMetadata,
+    preview:
+      "https://pitch.com/v/mangorenai-x6n96f/8d37c2f6-d584-4403-8c63-3ce5c4325ef7",
+    link: "https://github.com/pradanaadn/trash-classification",
+    status: "Completed",
+    description: "An image classfication model for classify waste objects",
+    stack: [
+      "Python",
+      "Gradio",
+      "Pytorch",
+      "Transfer Learning",
+      "Training Pipeline",
+      "Monitoring",
+    ],
+    achievements: [
+      "Developing CNN based classification model",
+      "Setup training pipeline and monitoring using github action and wandb",
+      "Developing Gradio based web app for model deployment",
+    ],
   },
   {
     title: "UmMeals",
-    image: stockin as ImageMetadata,
-    preview: "https://linkedin.com/posts/pradanaadn_ummeals-deck",
+    year: "2024",
+    image: umeals as ImageMetadata,
+    link: "https://github.com/Talenta-AI-2",
+    preview:
+      "https://www.linkedin.com/posts/pradanaadn_ummeals-deck-activity-7223282999407099904-g2PD?utm_source=share&utm_medium=member_desktop",
     status: "Completed",
-    description: "Maternal and Child Nutrition Tracking App with stunting detection",
+    description:
+      "Maternal and Child Nutrition Tracking App with stunting detection",
     stack: ["Python", "SQLAlchemy", "Azure AI", "Power BI", "Streamlit"],
     achievements: [
       "Top 6 finalist Microsoft Innovation Challenge 2024",
-      "Personalized nutrition monitoring",
-      "Early stunting detection system"
-    ]
+      "Personalized nutrition monitoring and chatbot",
+      "Early stunting detection system",
+    ],
   },
-  {
-    title: "Capstone Information System",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://drive.google.com/file/d/1x37qvoekHEoIhrANusdd5onVDC--48Cn/view",
-    status: "Completed",
-    description: "Comprehensive information system with database architecture and user interface design",
-    stack: ["Laravel", "PHP", "SQL", "Docker", "Bootstrap"],
-    achievements: [
-      "93% acceptance rate in functionality",
-      "Complete ERD and UML design",
-      "Agile development implementation"
-    ]
-  }
 ];
+const sortedProjects = projects.sort((a, b) => {
+  // Convert year strings to numbers and compare
+  const yearA = parseInt(a.year || "0");
+  const yearB = parseInt(b.year || "0");
+  return yearB - yearA;
+});
 ---
 
-<section id="projects" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
+<section
+  id="projects"
+  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+>
   <div class="max-w-5xl mx-auto">
     <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Featured Projects</h2>
     <h3 class="text-4xl md:text-5xl font-medium mb-8">My Work</h3>

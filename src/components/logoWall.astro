@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 
 const technologies = [
   // Cloud & Infrastructure
@@ -66,7 +67,7 @@ const technologies = [
     {
       [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="flex items-center gap-2 group transition-all duration-300">
-          <img
+          <Image
             src={`/svg/${tech}.svg`}
             alt={tech}
             class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"

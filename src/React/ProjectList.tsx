@@ -7,6 +7,8 @@ export interface Project {
     image: ImageMetadata;
     link?: string;
     preview?: string;
+    report_link?:string;
+    year?: string;
     status: 'Completed' | 'On Development' | 'Contributor';
     description: string;
     stack: string[];
@@ -38,7 +40,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
                         {project.stack.map((tech, index) => (
                             <span
                                 key={index}
-                                className="px-2 py-1 text-xs bg-yellow-800 rounded-full text-white font-semibold"
+                                className="px-2 py-1 text-xs bg-yellow-500 rounded-full text-yellow-950 font-semibold"
                             >
                                 {tech}
                             </span>

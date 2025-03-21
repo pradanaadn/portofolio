@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "ESNext",
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "types": [

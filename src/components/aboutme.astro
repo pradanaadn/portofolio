@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import ProjectList, { Project } from "../React/ProjectList.tsx";
 import me from "../../public/me.png";
 
 const summary = `Results-driven Machine Learning Engineer with 1 year of hands-on experience in developing 
@@ -19,7 +18,7 @@ const education = [
 ---
 
 <section
-  id="about me"
+  id="aboutme"
   class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
@@ -33,9 +32,11 @@ const education = [
           {summary}
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <button
+          <a
             type="button"
-            class="text-yellow-950 bg-yellow-500 hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2"
+            href="../../public/pdf/latest_resume.pdf"
+            target="_blank"
+            class="text-yellow-950 bg-yellow-500 hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-extrabold rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2"
           >
             <!-- License: MIT. Made by michaelampr: https://github.com/michaelampr/jam -->
             <svg
@@ -49,7 +50,7 @@ const education = [
               ></path></svg
             >
             Resume
-          </button>
+          </a>
         </div>
 
         <div class="space-y-4">
@@ -63,7 +64,7 @@ const education = [
                   <div class="flex justify-between items-center mt-2 text-sm text-[var(--white-icon)]">
                     <span>{edu.period}</span>
 
-                    <span class="rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-600/20 ring-inset">
+                    <span class="rounded-md bg-yellow-500 px-2 py-1 text-xs font-extrabold text-yellow-950 ring-1 ring-yellow-600/20 ring-inset">
                       GPA: {edu.gpa}
                     </span>
                   </div>
